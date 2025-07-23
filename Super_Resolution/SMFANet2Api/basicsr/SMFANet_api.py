@@ -58,23 +58,23 @@ class SMFANetApi:
         return self.opt
     def test_pipeline(self):
        
-        # print("Có muốn cập nhật file YAML không? (y/n)")
+        print("Có muốn cập nhật file YAML không? (y/n)")
                 # Tạo tên file YAML mới
 
-        # update_choice = input().strip().lower()
-        # if update_choice == 'y':
-        #     output_yaml = input("Nhập đường dẫn thư mục để lưu file YAML mới: ").strip()
+        update_choice = input().strip().lower()
+        if update_choice == 'y':
+            output_yaml = input("Nhập đường dẫn thư mục để lưu file YAML mới: ").strip()
             
-        #     # Tạo thư mục nếu chưa tồn tại
-        #     if not os.path.exists(output_yaml):
-        #         os.makedirs(output_yaml)
-        #         print(f"✅ Đã tạo thư mục: {output_yaml}")
-        #     else:
-        #         print(f"📂 Thư mục đã tồn tại: {output_yaml}")
-        #     output_yaml = os.path.join(output_yaml, 'yournewconfig.yml')
-        #     self.opt=self.update_yaml(output_yaml=output_yaml)
-        # else:
-        #     print("🚫 Bỏ qua cập nhật file YAML, sử dụng file gốc.")
+            # Tạo thư mục nếu chưa tồn tại
+            if not os.path.exists(output_yaml):
+                os.makedirs(output_yaml)
+                print(f"✅ Đã tạo thư mục: {output_yaml}")
+            else:
+                print(f"📂 Thư mục đã tồn tại: {output_yaml}")
+            output_yaml = os.path.join(output_yaml, 'yournewconfig.yml')
+            self.opt=self.update_yaml(output_yaml=output_yaml)
+        else:
+            print("🚫 Bỏ qua cập nhật file YAML, sử dụng file gốc.")
 
         # parse options, set distributed setting, set ramdom seed
         opt = parse_options(self.root_path, opt=self.opt, launcher='none', auto_resume=False, debug=False, local_rank=0, force_yml=None, is_train=self.is_train)

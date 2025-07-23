@@ -32,15 +32,16 @@ if __name__ == "__main__":
     
     # Tạo đường dẫn tương đối đến file YAML
 
-    if args.type not in ["SMFANet_DF2K_x4SR","SMFANet_DF2K_x2SR","SMFANet_DF2K_x3SR"] and args.model =='smfan':
-        print("❌ Type does not belong to model")
-        sys.exit(1)
-    elif args.type in ["SMFANet_DF2K_x4SR","SMFANet_DF2K_x2SR","SMFANet_DF2K_x3SR"] and args.model !='smfan':
-            # Tạo đường dẫn tương đối đến file YAML
-        print("❌ Type does not belong to model")
-        sys.exit(1)    
-    else: 
-        yaml_path = os.path.join(current_dir, 'options', 'test', f'{args.type}.yml')  
+    # if args.type not in ["SMFANet_DF2K_x4SR","SMFANet_DF2K_x2SR","SMFANet_DF2K_x3SR", "SMFANet_plust_DIV2K_x4SR"] and args.model =='smfan':
+    #     print("❌ Type does not belong to model")
+    #     sys.exit(1)
+    # elif args.type in ["SMFANet_DF2K_x4SR","SMFANet_DF2K_x2SR","SMFANet_DF2K_x3SR","SMFANet_plust_DIV2K_x4SR"] and args.model !='smfan':
+    #         # Tạo đường dẫn tương đối đến file YAML
+    #     print("❌ Type does not belong to model")
+    #     sys.exit(1)    
+    # else: 
+    yaml_path = os.path.join(current_dir, 'options', 'test', f'{args.type}.yml')  
+    print("File yaml : ", yaml_path)
     #To-do: adding more
     opt=yaml_path
     SMAFNetAPi=basicsr.SMFANet_api.SMFANetApi(args.input_dir,opt)

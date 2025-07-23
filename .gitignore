@@ -211,5 +211,5 @@ api_server.py
 ApiCASR.py
 
 #Super_Resolution
-./results
+/Super_Resolution/SMFANet2Api/results
 
