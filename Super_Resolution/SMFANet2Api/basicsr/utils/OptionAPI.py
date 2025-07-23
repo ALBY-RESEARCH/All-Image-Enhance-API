@@ -113,7 +113,7 @@ def parse_options(root_path,opt,launcher,auto_resume,debug,local_rank,force_yml,
     
     # parse yml to dict
     opt = yaml_load(opt)
-    print(opt)
+    # print(opt)
     # distributed settings
     if  launcher == 'none':
         opt['dist'] = False

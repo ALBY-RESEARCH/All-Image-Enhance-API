@@ -1,0 +1,41 @@
+# general settings
+name: SMFAN_x4
+model_type: SRModel
+scale: 4
+num_gpu: 0
+manual_seed: 0
+
+datasets:
+  test_1:  # the 1st test dataset
+    name: val_set5
+    type: SingleImageDataset
+    
+    dataroot_lq: /home/phananh285/projects/All-Image-Enhance-API/Super_Resolution/SMFANet2Api/datasets/Set5/LR_bicubic/X4
+    # dataroot_lq: linga guli guli
+    io_backend:
+      type: disk
+
+# network structures
+network_g:
+  type: SMFANet
+  dim: 36
+  n_blocks: 8
+  ffn_scale: 2
+  upscaling_factor: 4
+
+
+
+# path# path
+path:
+  pretrain_network_g: /home/phananh285/projects/All-Image-Enhance-API/Super_Resolution/SMFANet2Api/pretrain/SMFANet_DF2K_100w_x4SR.pth
+  strict_load_g: true
+  param_key: ~
+# validation settings
+
+val:
+  save_img: true
+  flip_seq: true
+  center_frame_only: true
+  suffix: ~  # add suffix to saved images, if None, use exp name
+
+  metrics: None # metrics for validation, if None, no metrics will be calculated
