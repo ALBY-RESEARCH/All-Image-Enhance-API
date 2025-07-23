@@ -1,8 +1,6 @@
-# 📖 Api for SMFANet: A Lightweight Self-Modulation Feature Aggregation Network for Efficient Image Super-Resolution
+# 📖 API for SMFANet: A Lightweight Self-Modulation Feature Aggregation Network for Efficient Image Super-Resolution
 
-Refer to this [README.md](https://github.com/Zheng-MJ/SMFANet/README.md) for more Detailed
-
-
+Refer to this [README.md](https://github.com/Zheng-MJ/SMFANet/blob/main/README.md) for more Detailed
 ---
 
 ### Requirements
