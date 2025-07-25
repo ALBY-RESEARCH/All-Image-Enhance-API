@@ -126,3 +126,6 @@ python utils/benchmark.py --model real-esrgan --device cuda --size 512
 * Keep model wrappers clean and modular
 * Avoid hardcoded paths; use `config.yaml` or CLI args
 
+## Estimated inference Runtime on CPU
+https://docs.google.com/spreadsheets/d/1RmzOShrssWUb2wrY3Pk115VARq6SE8ObDFn3pWDKTXA/edit?usp=sharinghttps://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
